@@ -1,0 +1,214 @@
+/* custom.css - Modern Professional UI Styling for Customer Complaint AI Portal */
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    scroll-behavior: smooth;
+}
+
+/* Nav Pills Custom */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Status Indicator Dot */
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.online {
+    background-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+}
+
+.status-dot.offline {
+    background-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
+}
+
+.hero-bg-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(0,0,0,0) 70%);
+    top: -100px;
+    right: -100px;
+    pointer-events: none;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 1rem;
+}
+
+/* Cards & Containers */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: var(--hover-shadow) !important;
+}
+
+/* Buttons */
+.btn-xs {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+}
+
+/* Empty icon circle */
+.empty-icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stat Circle */
+.stat-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Result Metric Card */
+.result-metric-card {
+    transition: transform 0.2s ease;
+}
+
+.result-metric-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Probability Bars */
+.prob-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+}
+
+.prob-label {
+    width: 170px;
+    flex-shrink: 0;
+    font-weight: 500;
+}
+
+.prob-bar-wrapper {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.prob-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prob-value {
+    width: 48px;
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+}
+
+/* Copilot Chat Styling */
+#copilotChatBox::-webkit-scrollbar {
+    width: 6px;
+}
+
+#copilotChatBox::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+
+.chat-bubble-user {
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 1rem 1rem 0 1rem;
+    padding: 0.75rem 1rem;
+    max-width: 80%;
+    align-self: flex-end;
+    font-size: 0.9rem;
+}
+
+.chat-bubble-bot {
+    background: #ffffff;
+    color: #1e293b;
+    border-radius: 1rem 1rem 1rem 0;
+    padding: 0.75rem 1rem;
+    max-width: 85%;
+    align-self: flex-start;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    font-size: 0.9rem;
+    border: 1px solid #e2e8f0;
+}
+
+/* Badges */
+.badge {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Entity pills */
+.entity-pill {
+    font-size: 0.78rem;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .prob-bar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .prob-bar-wrapper {
+        width: 100%;
+    }
+    .prob-label {
+        width: 100%;
+    }
+}
