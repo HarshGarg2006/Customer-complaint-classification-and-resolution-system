@@ -28,7 +28,7 @@ Database:
 
 const AppState = {
 
-    backendUrl: "http://127.0.0.1:5000",
+   backendUrl: "https://resolveai-backend-b8g7.onrender.com",
 
     mode: "auto",
 
